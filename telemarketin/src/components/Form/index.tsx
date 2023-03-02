@@ -9,6 +9,7 @@ import DadosUsuarios from "./DadosUsuarios";
 import { Formik } from "formik";
 import { EmpréstimoConsignadoValues } from "./Types";
 import { initialValuesForm } from "./Utils/InitialValuesForm";
+import Margem from "./Margem";
 
 const Form = () => {
   const styles = useStyles();
@@ -39,6 +40,7 @@ const Form = () => {
             >
               <Grid container rowSpacing={2} columnSpacing={2}>
                 <DadosUsuarios />
+                <Margem />
                 {/* <Grid item xs={12}>
             <Typography variant="h6">Dados Bancarios</Typography>
           </Grid>

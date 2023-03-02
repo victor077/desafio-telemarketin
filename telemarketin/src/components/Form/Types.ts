@@ -3,7 +3,6 @@ export type EmpréstimoConsignadoValues = {
   nome: string;
   dataNascimento: string;
   cpf: string;
-  descricao: string;
   situacaoBeneficio: string;
   nit: string;
   identidade: number;
@@ -14,14 +13,64 @@ export type EmpréstimoConsignadoValues = {
   pensaoAlimenticia: string;
   bloqueioEmprestismo: string;
   beneficioPermiteEmprestimo: string;
-  possuiRepresentanteLegalProcuradorme: string
   naoPerturbe: string;
   rg: string;
   ddb: string;
   nomeMae: string;
-  codigo: string;
   descontosCartao: DescontosCartaoType;
   enderecoPessoal: EnderecoPessoalType;
+  especie: EspecieType;
+  margem: MargemType;
+  contratosEmprestimo: ContratosEmprestimoType[];
+};
+
+type EspecieType = {
+  codigo: string;
+  descricao: string;
+};
+
+type MargemType = {
+  competencia: string;
+  baseCalculoMargemConsignavel: number;
+  margemDisponivelEmprestimo: number;
+  percentualMargemDisponivelEmprestimo: number;
+  percentualMargemTotalEmprestimo: number;
+  quantidadeEmprestimo: number;
+  possuiCartao: string;
+  margemDisponivelCartao: number;
+  percentualmargemDisponivelCartao: number;
+  percentualMargemTotalCartao: number;
+  margemDisponivelRcc: number;
+  margemDisponivelEmprestimoOn: string;
+};
+
+type ContratosEmprestimoType = {
+  contrato: string;
+  dataInicioContrato: string;
+  competenciaInicioDesconto: string;
+  competenciaFimDesconto: string;
+  dataInclusao: string;
+  situacao: string;
+  excluidoAps: string;
+  excluidoBanco: string;
+  valorEmprestado: number;
+  valorParcela: number;
+  quantidadeParcelas: number;
+  quantidadeParcelasEmAberto: number;
+  saldoQuitacao: number;
+  taxa: number;
+  tipoEmprestimo: TipoEmprestimoType;
+  banco: BancoType;
+};
+
+type TipoEmprestimoType = {
+  codigo: string;
+  descricao: string;
+};
+
+type BancoType = {
+  codigo: string;
+  nome: string;
 };
 
 type DescontosCartaoType = {};

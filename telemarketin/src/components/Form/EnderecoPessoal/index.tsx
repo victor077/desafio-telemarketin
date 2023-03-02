@@ -3,7 +3,6 @@ import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import { useFormikContext } from "formik";
 import { EmpréstimoConsignadoValues } from "../Types";
-import { initialValuesForm } from "../Utils/InitialValuesForm";
 
 const EnderecoPessoal = () => {
   const { getFieldProps, errors } =

@@ -3,66 +3,96 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
+import { useFormikContext } from "formik";
+import { EmpréstimoConsignadoValues } from "../Types";
+import PossuiCartao from "./PossuiCartao";
 
 const Margem = () => {
+  const { getFieldProps } = useFormikContext<EmpréstimoConsignadoValues>();
   return (
     <>
       <Grid item xs={12}>
         <Typography variant="h6">Margem</Typography>
       </Grid>
       <Grid item xs={12}>
-        <TextField fullWidth label="competencia" />
+        <TextField
+          {...getFieldProps("margem.competencia")}
+          fullWidth
+          label="Competencia"
+        />
       </Grid>
       <Grid item xs={4}>
-        <TextField fullWidth label="baseCalculoMargemConsignavel" />
+        <TextField
+          {...getFieldProps("margem.baseCalculoMargemConsignavel")}
+          fullWidth
+          label="Calculo Margem Consignavel"
+        />
       </Grid>
       <Grid item xs={4}>
-        <TextField fullWidth label="margemDisponivelEmprestimo" />
+        <TextField
+          {...getFieldProps("margem.margemDisponivelEmprestimo")}
+          fullWidth
+          label="Disponivel Emprestimo"
+        />
       </Grid>
       <Grid item xs={4}>
-        <TextField fullWidth label="percentualMargemDisponivelEmprestimo" />
+        <TextField
+          {...getFieldProps("margem.percentualMargemDisponivelEmprestimo")}
+          fullWidth
+          label="Percentual de Margem Disponivel Emprestimo"
+        />
       </Grid>
       <Grid item xs={3}>
-        <TextField fullWidth label="percentualMargemTotalEmprestimo" />
+        <TextField
+          {...getFieldProps("margem.percentualMargemTotalEmprestimo")}
+          fullWidth
+          label="Percentual de Margem Total do Emprestimo"
+        />
       </Grid>
       <Grid item xs={3}>
-        <TextField fullWidth label="quantidadeEmprestimo" />
+        <TextField
+          {...getFieldProps("margem.quantidadeEmprestimo")}
+          fullWidth
+          label="Quantidade de Emprestimo"
+        />
       </Grid>
       <Grid item xs={3}>
-        <TextField fullWidth label="possuiCartao" />
+        <PossuiCartao />
       </Grid>
       <Grid item xs={3}>
-        <TextField fullWidth label="margemDisponivelCartao" />
+        <TextField
+          {...getFieldProps("margem.margemDisponivelCartao")}
+          fullWidth
+          label="Margem Disponivel no Cartao"
+        />
       </Grid>
       <Grid item xs={3}>
-        <TextField fullWidth label="percentualmargemDisponivelCartao" />
+        <TextField
+          {...getFieldProps("margem.percentualmargemDisponivelCartao")}
+          fullWidth
+          label="Percentual de Margem Disponivel no Cartao"
+        />
       </Grid>
       <Grid item xs={3}>
-        <TextField fullWidth label="percentualMargemTotalCartao" />
+        <TextField
+          {...getFieldProps("margem.percentualMargemTotalCartao")}
+          fullWidth
+          label="Percentual de Margem Total do Cartao"
+        />
       </Grid>
       <Grid item xs={3}>
-        <TextField fullWidth label="margemDisponivelRcc" />
+        <TextField
+          {...getFieldProps("margem.margemDisponivelRcc")}
+          fullWidth
+          label="Margem Disponivel no Rcc"
+        />
       </Grid>
       <Grid item xs={3}>
-        <TextField fullWidth label="margemDisponivelEmprestimoOn" />
-      </Grid>
-      <Grid item xs={12}>
-        <Typography variant="h6">tipoEmprestimo</Typography>
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="codigo" />
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="descricao" />
-      </Grid>
-      <Grid item xs={12}>
-        <Typography variant="h6">Banco</Typography>
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="codigo" />
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="nome" />
+        <TextField
+          {...getFieldProps("margem.percentualMargemDisponivelEmprestimo")}
+          fullWidth
+          label="Margem Disponivel no Emprestimo On"
+        />
       </Grid>
     </>
   );

@@ -5,10 +5,10 @@
       "nome": "SEBASTIAO RIBEIRO",
       "dataNascimento": "1956-09-04",
       "cpf": "67418371080",
-      // "especie": {
-      //   "codigo": "32",
-      //   "descricao": "APOSENTADORIA POR INVALIDEZ PREVIDENCIARIA"
-      // },
+       "especie": {
+         "codigo": "32",
+         "descricao": "APOSENTADORIA POR INVALIDEZ PREVIDENCIARIA"
+       },
       // "dadosBancarios": {
       //   "banco": {
       //     "codigo": "389",
@@ -43,20 +43,20 @@
       "pensaoAlimenticia": "Não",
       "bloqueioEmprestismo": "Não",
       "beneficioPermiteEmprestimo": "Sim",
-      // "margem": {
-      //   "competencia": "02/2023",
-      //   "baseCalculoMargemConsignavel": 4101.43,
-      //   "margemDisponivelEmprestimo": 0,
-      //   "percentualMargemDisponivelEmprestimo": 0,
-      //   "percentualMargemTotalEmprestimo": 35,
-      //   "quantidadeEmprestimo": 9,
-      //   "possuiCartao": "Sim",
-      //   "margemDisponivelCartao": 0,
-      //   "percentualmargemDisponivelCartao": 0,
-      //   "percentualMargemTotalCartao": 5,
-      //   "margemDisponivelRcc": 0,
-      //   "margemDisponivelEmprestimoOn": "N/D"
-      // },
+       "margem": {
+         "competencia": "02/2023",
+         "baseCalculoMargemConsignavel": 4101.43,
+         "margemDisponivelEmprestimo": 0,
+         "percentualMargemDisponivelEmprestimo": 0,
+         "percentualMargemTotalEmprestimo": 35,
+         "quantidadeEmprestimo": 9,
+         "possuiCartao": "Sim",
+         "margemDisponivelCartao": 0,
+         "percentualmargemDisponivelCartao": 0,
+         "percentualMargemTotalCartao": 5,
+         "margemDisponivelRcc": 0,
+         "margemDisponivelEmprestimoOn": "N/D"
+       },
       // "contratosEmprestimo": [
       //   {
       //     "contrato": "591587983",

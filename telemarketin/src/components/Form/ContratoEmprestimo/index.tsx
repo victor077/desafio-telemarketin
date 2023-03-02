@@ -1,13 +1,14 @@
+import React from "react";
+
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import React from "react";
 
 const ContratoEmprestimo = () => {
   return (
     <>
       <Grid item xs={12}>
-        <Typography variant="h6">contratosEmprestimo</Typography>
+        <Typography variant="h6">Contratos Emprestimo</Typography>
       </Grid>
       <Grid item xs={3}>
         <TextField fullWidth label="contrato" />
