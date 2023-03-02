@@ -1,69 +1,77 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 import Grid from "@mui/material/Grid";
-import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import FormEmprestimo from "./FormEmprestimo";
 import { useContratos } from "../Context/ContratosContext";
-import { ContratosEmprestimoType } from "../Types";
-import { initialValuesForm } from "../Utils/InitialValuesForm";
 
-const ContratoEmprestimo = () => {
-  const { contratos, handleDeletar, handleInserirContrato } = useContratos();
-  const [inputsValues, setInputValues] = useState(
-    initialValuesForm.contratosEmprestimo
-  );
+type ContratoEmprestimoProps = {
+  tipoContrato: "contratosEmprestimo" | "contratosCartao" | "contratosRcc";
+};
+
+const ContratoEmprestimo = ({ tipoContrato }: ContratoEmprestimoProps) => {
+  const { contratos, handleInserirContrato } = useContratos();
+
   return (
     <>
-      <Grid item xs={12}>
-        <Typography variant="h6">Contratos Emprestimo</Typography>
-      </Grid>
-      <Grid item xs={3}>
-        <TextField
-          value={inputsValues.}
-          onChange={(event: any) => setInputValues(inputsValues.)}
-          fullWidth
-          label="contrato"
-        />
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="dataInicioContrato" />
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="competenciaInicioDesconto" />
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="competenciaFimDesconto" />
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="dataInclusao" />
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="situacao" />
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="excluidoAps" />
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="excluidoBanco" />
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="valorEmprestado" />
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="valorParcela" />
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="quantidadeParcelas" />
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="quantidadeParcelasEmAberto" />
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="saldoQuitacao" />
-      </Grid>
-      <Grid item xs={3}>
-        <TextField fullWidth label="taxa" />
-      </Grid>
+      {contratos.map(() => (
+        <FormEmprestimo />
+      ))}
+      {tipoContrato === "contratosEmprestimo" && (
+        <>
+          <Grid item xs={6}>
+            <Button
+              fullWidth
+              onClick={(event) => handleInserirContrato(event.preventDefault)}
+              variant="contained"
+            >
+              Adicionar Contrato Emprestimo
+            </Button>
+          </Grid>
+          <Grid item xs={6}>
+            <Button fullWidth variant="outlined">
+              Remover Contrato Emprestimo
+            </Button>
+          </Grid>
+        </>
+      )}
+
+      {tipoContrato === "contratosCartao" && (
+        <>
+          <Grid item xs={6}>
+            <Button
+              fullWidth
+              onClick={(event) => handleInserirContrato(event.preventDefault)}
+              variant="contained"
+            >
+              Adicionar Contrato Cartao
+            </Button>
+          </Grid>
+          <Grid item xs={6}>
+            <Button fullWidth variant="outlined">
+              Remover Contrato Cartao
+            </Button>
+          </Grid>
+        </>
+      )}
+      {tipoContrato === "contratosRcc" && (
+        <>
+          <Grid item xs={6}>
+            <Button
+              fullWidth
+              onClick={(event) => handleInserirContrato(event.preventDefault)}
+              variant="contained"
+            >
+              Adicionar Contrato Rcc
+            </Button>
+          </Grid>
+          <Grid item xs={6}>
+            <Button fullWidth variant="outlined">
+              Remover Contrato Rcc
+            </Button>
+          </Grid>
+        </>
+      )}
     </>
   );
 };

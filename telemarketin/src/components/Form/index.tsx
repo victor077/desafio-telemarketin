@@ -7,15 +7,19 @@ import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import DadosUsuarios from "./DadosUsuarios";
 import { Formik } from "formik";
-import { EmpréstimoConsignadoValues } from "./Types";
+import { ContratosEmprestimoType, EmpréstimoConsignadoValues } from "./Types";
 import { initialValuesForm } from "./Utils/InitialValuesForm";
 import Margem from "./Margem";
+import ContratoEmprestimo from "./ContratoEmprestimo";
+import { useContratos } from "./Context/ContratosContext";
 
 const Form = () => {
   const styles = useStyles();
+  const { inputsValues } = useContratos();
+  console.log("inputs", inputsValues);
 
   const handleSubmit = useCallback((values: EmpréstimoConsignadoValues) => {
-    console.log(values);
+    console.log("submmit", values, "state", inputsValues);
   }, []);
 
   return (
@@ -41,6 +45,7 @@ const Form = () => {
               <Grid container rowSpacing={2} columnSpacing={2}>
                 <DadosUsuarios />
                 <Margem />
+                <ContratoEmprestimo tipoContrato="contratosCartao"/>
                 {/* <Grid item xs={12}>
             <Typography variant="h6">Dados Bancarios</Typography>
           </Grid>
