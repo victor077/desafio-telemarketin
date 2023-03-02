@@ -1,0 +1,27 @@
+import { EmpréstimoConsignadoValues } from "../Types";
+
+export const initialValuesForm: EmpréstimoConsignadoValues = {
+  beneficio: "a",
+  nome: "a",
+  dataNascimento: "a",
+  cpf: "a",
+  descricao: "a",
+  situacaoBeneficio: "a",
+  nit: "a",
+  identidade: 11,
+  sexo: "a",
+  dib: "a",
+  valorBeneficio: 11,
+  possuiRepresentanteLegalProcurador: "a",
+  pensaoAlimenticia: "a",
+  bloqueioEmprestismo: "a",
+  beneficioPermiteEmprestimo: "a",
+  possuiRepresentanteLegalProcuradorme: "a",
+  naoPerturbe: "a",
+  rg: "a",
+  ddb: "a",
+  nomeMae: "a",
+  codigo: "a",
+  descontosCartao: {},
+  enderecoPessoal: { bairro: "a", cep: "a", cidade: "a", endereco: "a", uf: "a" },
+};
