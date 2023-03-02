@@ -44,7 +44,7 @@ type MargemType = {
   margemDisponivelEmprestimoOn: string;
 };
 
-type ContratosEmprestimoType = {
+export type ContratosEmprestimoType = {
   contrato: string;
   dataInicioContrato: string;
   competenciaInicioDesconto: string;
