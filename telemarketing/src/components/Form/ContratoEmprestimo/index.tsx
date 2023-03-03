@@ -32,11 +32,6 @@ const ContratoEmprestimo = () => {
           Adicionar Contrato Emprestimo
         </Button>
       </Grid>
-      <Grid item xs={6}>
-        <Button fullWidth variant="outlined">
-          Remover Contrato Emprestimo
-        </Button>
-      </Grid>
     </>
   );
 };

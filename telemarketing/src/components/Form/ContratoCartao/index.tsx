@@ -23,11 +23,6 @@ const ContratoCartao = () => {
           Adicionar Contrato Cartao
         </Button>
       </Grid>
-      <Grid item xs={6}>
-        <Button fullWidth variant="outlined">
-          Remover Contrato Cartao
-        </Button>
-      </Grid>
     </>
   );
 };

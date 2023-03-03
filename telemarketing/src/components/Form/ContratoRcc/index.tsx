@@ -23,11 +23,6 @@ const ContratoRcc = () => {
           Adicionar Contrato Rcc
         </Button>
       </Grid>
-      <Grid item xs={6}>
-        <Button fullWidth variant="outlined">
-          Remover Contrato Rcc
-        </Button>
-      </Grid>
     </>
   );
 };

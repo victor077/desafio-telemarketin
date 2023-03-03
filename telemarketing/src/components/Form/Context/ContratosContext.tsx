@@ -157,7 +157,7 @@ const ContratosContextProvider = ({ children }: PropsWithChildren) => {
         return inputsAtt;
       });
     },
-    [setInputValuesEmprestimo]
+    [setInputValuesEmprestimo, inputsValuesEmprestimo]
   );
   const handleChangeCartao = (event: any) => {
     const { value, name } = event.target;
@@ -194,7 +194,7 @@ const ContratosContextProvider = ({ children }: PropsWithChildren) => {
 
   const handleAtualizarContratoEmprestimo = useCallback(
     (novoContratoEmprestimo: ContratosEmprestimoType) => {
-      console.log("atualizarrrrrrrrr");
+      // console.log("atualizarrrrrrrrr");
       setContratosCartao((prevContratosEmprestimo) => {
         const contratoEmprestimoAtualizado = contratosEmprestimo.map((objeto) =>
           objeto.id === novoContratoEmprestimo.id
@@ -204,7 +204,6 @@ const ContratosContextProvider = ({ children }: PropsWithChildren) => {
         const existemObjeto = prevContratosEmprestimo.some(
           (objeto) => objeto.id === novoContratoEmprestimo.id
         );
-        console.log(novoContratoEmprestimo);
         return existemObjeto
           ? contratoEmprestimoAtualizado
           : [...contratoEmprestimoAtualizado, novoContratoEmprestimo];
@@ -243,48 +242,26 @@ const ContratosContextProvider = ({ children }: PropsWithChildren) => {
     },
     [setContratosEmprestimo]
   );
-    console.log("teste", contratosEmprestimo);
-    
+  // console.log("teste", contratosEmprestimo);
+
   const handleInserirContratoEmprestimo = useCallback(
     (event: MouseEventHandler<HTMLAnchorElement>) => {
-      console.log("opaaaa");
+      const novoContrato = {
+        ...inputsValuesEmprestimo,
+        id: inputsValuesEmprestimo.id + 1,
+      };
+      console.log(novoContrato);
+      // console.log("opaaaa");
       setContratosEmprestimo((prevContratos) => {
-        return [
-          ...prevContratos,
-          {
-            id: 2,
-            contrato: "",
-            dataInicioContrato: "",
-            competenciaInicioDesconto: "",
-            competenciaFimDesconto: "",
-            dataInclusao: "",
-            situacao: "",
-            excluidoAps: "",
-            excluidoBanco: "",
-            valorEmprestado: 0,
-            valorParcela: 0,
-            quantidadeParcelas: 0,
-            quantidadeParcelasEmAberto: 0,
-            saldoQuitacao: 0,
-            taxa: 0,
-            tipoEmprestimo: {
-              codigo: "",
-              descricao: "",
-            },
-            banco: {
-              codigo: "",
-              nome: "",
-            },
-          },
-        ];
+        return [...prevContratos, novoContrato];
       });
     },
-    [setContratosEmprestimo]
+    [setContratosEmprestimo, inputsValuesEmprestimo]
   );
 
   const handleInserirContratoRcc = useCallback(
     (event: MouseEventHandler<HTMLAnchorElement>) => {
-      console.log("opaaaa");
+      // console.log("opaaaa");
       setContratosRcc((prevContratos) => {
         return [
           ...prevContratos,
@@ -321,7 +298,7 @@ const ContratosContextProvider = ({ children }: PropsWithChildren) => {
 
   const handleInserirContratoCartao = useCallback(
     (event: MouseEventHandler<HTMLAnchorElement>) => {
-      console.log("opaaaa");
+      // console.log("opaaaa");
       setContratosCartao((prevContratos) => {
         return [
           ...prevContratos,

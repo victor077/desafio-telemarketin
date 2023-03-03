@@ -19,9 +19,9 @@ const Form = () => {
   const styles = useStyles();
   const { inputsValuesCartao, inputsValuesEmprestimo, inputsValuesRcc } =
     useContratos();
-  console.log("inputsCartao", inputsValuesCartao);
-  console.log("inputsValuesEmprestimo", inputsValuesEmprestimo);
-  console.log("inputsValuesRcc", inputsValuesRcc);
+  // console.log("inputsCartao", inputsValuesCartao);
+  // console.log("inputsValuesEmprestimo", inputsValuesEmprestimo);
+  // console.log("inputsValuesRcc", inputsValuesRcc);
 
 
   const handleSubmit = useCallback((values: EmpréstimoConsignadoValues) => {
