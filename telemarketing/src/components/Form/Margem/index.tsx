@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import { useFormikContext } from "formik";
 import { EmpréstimoConsignadoValues } from "../Types";
 import PossuiCartao from "./PossuiCartao";
+import InputStyles from "../../InputStyles";
 
 const Margem = () => {
   const { getFieldProps } = useFormikContext<EmpréstimoConsignadoValues>();
@@ -22,69 +23,78 @@ const Margem = () => {
         />
       </Grid>
       <Grid item xs={4}>
-        <TextField
+        <label>Calculo Margem Consignavel</label>
+        <InputStyles
           {...getFieldProps("margem.baseCalculoMargemConsignavel")}
-          fullWidth
-          label="Calculo Margem Consignavel"
+          mask="currency"
+          icone="money"
         />
       </Grid>
       <Grid item xs={4}>
-        <TextField
+        <label>Disponivel Emprestimo</label>
+        <InputStyles
           {...getFieldProps("margem.margemDisponivelEmprestimo")}
-          fullWidth
-          label="Disponivel Emprestimo"
+          mask="currency"
+          icone="money"
         />
       </Grid>
       <Grid item xs={4}>
-        <TextField
+        <label>Percentual de Margem Disponivel Emprestimo</label>
+        <InputStyles
           {...getFieldProps("margem.percentualMargemDisponivelEmprestimo")}
-          fullWidth
-          label="Percentual de Margem Disponivel Emprestimo"
+          mask="currency"
+          icone="money"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
+        <label>Percentual de Margem Total do Emprestimo</label>
+        <InputStyles
           {...getFieldProps("margem.percentualMargemTotalEmprestimo")}
-          fullWidth
-          label="Percentual de Margem Total do Emprestimo"
+          mask="currency"
+          icone="money"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
+        <label>Quantidade de Emprestimo</label>
+        <InputStyles
           {...getFieldProps("margem.quantidadeEmprestimo")}
-          fullWidth
-          label="Quantidade de Emprestimo"
+          mask="currency"
+          icone="money"
         />
       </Grid>
       <Grid item xs={3}>
         <PossuiCartao />
       </Grid>
       <Grid item xs={3}>
-        <TextField
+        <label>Margem Disponivel no Cartao</label>
+        <InputStyles
           {...getFieldProps("margem.margemDisponivelCartao")}
-          fullWidth
-          label="Margem Disponivel no Cartao"
+          mask="currency"
+          icone="money"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
+        <label>Percentual de Margem Disponivel no Cartao</label>
+        <InputStyles
           {...getFieldProps("margem.percentualmargemDisponivelCartao")}
-          fullWidth
-          label="Percentual de Margem Disponivel no Cartao"
+          mask="currency"
+          icone="money"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
+        <label>Percentual de Margem Total do Cartao</label>
+        <InputStyles
           {...getFieldProps("margem.percentualMargemTotalCartao")}
-          fullWidth
-          label="Percentual de Margem Total do Cartao"
+          mask="currency"
+          icone="money"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
+        <label>Margem Disponivel no Rcc</label>
+        <InputStyles
           {...getFieldProps("margem.margemDisponivelRcc")}
-          fullWidth
-          label="Margem Disponivel no Rcc"
+          mask="currency"
+          icone="money"
         />
       </Grid>
       <Grid item xs={3}>

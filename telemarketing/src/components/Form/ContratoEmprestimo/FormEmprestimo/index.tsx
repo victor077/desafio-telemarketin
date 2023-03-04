@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import { useContratoEmprestimo } from "../../Context/ContratosEmprestimoContext";
 import { ContratosType, dadosContratoEmprestimo } from "../../Context/Types";
+import InputStyles from "../../../InputStyles";
 
 type FormEmprestimoProps = {
   dados: ContratosType;
@@ -20,7 +21,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: value,
         dataInicioContrato: dadosContratoEmprestimo.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoEmprestimo.competenciaFimDesconto,
         dataInclusao: dadosContratoEmprestimo.dataInclusao,
         situacao: dadosContratoEmprestimo.situacao,
@@ -29,7 +31,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: dadosContratoEmprestimo.valorEmprestado,
         valorParcela: dadosContratoEmprestimo.valorParcela,
         quantidadeParcelas: dadosContratoEmprestimo.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoEmprestimo.saldoQuitacao,
         taxa: dadosContratoEmprestimo.taxa,
         tipoEmprestimo: {
@@ -53,7 +56,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: dadosContratoEmprestimo.contrato,
         dataInicioContrato: value,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoEmprestimo.competenciaFimDesconto,
         dataInclusao: dadosContratoEmprestimo.dataInclusao,
         situacao: dadosContratoEmprestimo.situacao,
@@ -62,7 +66,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: dadosContratoEmprestimo.valorEmprestado,
         valorParcela: dadosContratoEmprestimo.valorParcela,
         quantidadeParcelas: dadosContratoEmprestimo.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoEmprestimo.saldoQuitacao,
         taxa: dadosContratoEmprestimo.taxa,
         tipoEmprestimo: {
@@ -95,7 +100,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: dadosContratoEmprestimo.valorEmprestado,
         valorParcela: dadosContratoEmprestimo.valorParcela,
         quantidadeParcelas: dadosContratoEmprestimo.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoEmprestimo.saldoQuitacao,
         taxa: dadosContratoEmprestimo.taxa,
         tipoEmprestimo: {
@@ -118,7 +124,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: dadosContratoEmprestimo.contrato,
         dataInicioContrato: dadosContratoEmprestimo.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: value,
         dataInclusao: dadosContratoEmprestimo.dataInclusao,
         situacao: dadosContratoEmprestimo.situacao,
@@ -127,7 +134,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: dadosContratoEmprestimo.valorEmprestado,
         valorParcela: dadosContratoEmprestimo.valorParcela,
         quantidadeParcelas: dadosContratoEmprestimo.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoEmprestimo.saldoQuitacao,
         taxa: dadosContratoEmprestimo.taxa,
         tipoEmprestimo: {
@@ -150,7 +158,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: dadosContratoEmprestimo.contrato,
         dataInicioContrato: dadosContratoEmprestimo.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoEmprestimo.competenciaFimDesconto,
         dataInclusao: value,
         situacao: dadosContratoEmprestimo.situacao,
@@ -159,7 +168,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: dadosContratoEmprestimo.valorEmprestado,
         valorParcela: dadosContratoEmprestimo.valorParcela,
         quantidadeParcelas: dadosContratoEmprestimo.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoEmprestimo.saldoQuitacao,
         taxa: dadosContratoEmprestimo.taxa,
         tipoEmprestimo: {
@@ -182,7 +192,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: dadosContratoEmprestimo.contrato,
         dataInicioContrato: dadosContratoEmprestimo.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoEmprestimo.competenciaFimDesconto,
         dataInclusao: dadosContratoEmprestimo.dataInclusao,
         situacao: value,
@@ -191,7 +202,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: dadosContratoEmprestimo.valorEmprestado,
         valorParcela: dadosContratoEmprestimo.valorParcela,
         quantidadeParcelas: dadosContratoEmprestimo.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoEmprestimo.saldoQuitacao,
         taxa: dadosContratoEmprestimo.taxa,
         tipoEmprestimo: {
@@ -214,7 +226,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: dadosContratoEmprestimo.contrato,
         dataInicioContrato: dadosContratoEmprestimo.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoEmprestimo.competenciaFimDesconto,
         dataInclusao: dadosContratoEmprestimo.dataInclusao,
         situacao: dadosContratoEmprestimo.situacao,
@@ -223,7 +236,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: dadosContratoEmprestimo.valorEmprestado,
         valorParcela: dadosContratoEmprestimo.valorParcela,
         quantidadeParcelas: dadosContratoEmprestimo.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoEmprestimo.saldoQuitacao,
         taxa: dadosContratoEmprestimo.taxa,
         tipoEmprestimo: {
@@ -246,7 +260,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: dadosContratoEmprestimo.contrato,
         dataInicioContrato: dadosContratoEmprestimo.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoEmprestimo.competenciaFimDesconto,
         dataInclusao: dadosContratoEmprestimo.dataInclusao,
         situacao: dadosContratoEmprestimo.situacao,
@@ -255,7 +270,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: dadosContratoEmprestimo.valorEmprestado,
         valorParcela: dadosContratoEmprestimo.valorParcela,
         quantidadeParcelas: dadosContratoEmprestimo.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoEmprestimo.saldoQuitacao,
         taxa: dadosContratoEmprestimo.taxa,
         tipoEmprestimo: {
@@ -278,7 +294,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: dadosContratoEmprestimo.contrato,
         dataInicioContrato: dadosContratoEmprestimo.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoEmprestimo.competenciaFimDesconto,
         dataInclusao: dadosContratoEmprestimo.dataInclusao,
         situacao: dadosContratoEmprestimo.situacao,
@@ -287,7 +304,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: value,
         valorParcela: dadosContratoEmprestimo.valorParcela,
         quantidadeParcelas: dadosContratoEmprestimo.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoEmprestimo.saldoQuitacao,
         taxa: dadosContratoEmprestimo.taxa,
         tipoEmprestimo: {
@@ -310,7 +328,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: dadosContratoEmprestimo.contrato,
         dataInicioContrato: dadosContratoEmprestimo.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoEmprestimo.competenciaFimDesconto,
         dataInclusao: dadosContratoEmprestimo.dataInclusao,
         situacao: dadosContratoEmprestimo.situacao,
@@ -319,7 +338,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: dadosContratoEmprestimo.valorEmprestado,
         valorParcela: value,
         quantidadeParcelas: dadosContratoEmprestimo.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoEmprestimo.saldoQuitacao,
         taxa: dadosContratoEmprestimo.taxa,
         tipoEmprestimo: {
@@ -342,7 +362,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: dadosContratoEmprestimo.contrato,
         dataInicioContrato: dadosContratoEmprestimo.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoEmprestimo.competenciaFimDesconto,
         dataInclusao: dadosContratoEmprestimo.dataInclusao,
         situacao: dadosContratoEmprestimo.situacao,
@@ -351,7 +372,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: dadosContratoEmprestimo.valorEmprestado,
         valorParcela: dadosContratoEmprestimo.valorParcela,
         quantidadeParcelas: value,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoEmprestimo.saldoQuitacao,
         taxa: dadosContratoEmprestimo.taxa,
         tipoEmprestimo: {
@@ -374,7 +396,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: dadosContratoEmprestimo.contrato,
         dataInicioContrato: dadosContratoEmprestimo.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoEmprestimo.competenciaFimDesconto,
         dataInclusao: dadosContratoEmprestimo.dataInclusao,
         situacao: dadosContratoEmprestimo.situacao,
@@ -406,7 +429,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: dadosContratoEmprestimo.contrato,
         dataInicioContrato: dadosContratoEmprestimo.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoEmprestimo.competenciaFimDesconto,
         dataInclusao: dadosContratoEmprestimo.dataInclusao,
         situacao: dadosContratoEmprestimo.situacao,
@@ -415,7 +439,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: dadosContratoEmprestimo.valorEmprestado,
         valorParcela: dadosContratoEmprestimo.valorParcela,
         quantidadeParcelas: dadosContratoEmprestimo.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: value,
         taxa: dadosContratoEmprestimo.taxa,
         tipoEmprestimo: {
@@ -438,7 +463,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: dadosContratoEmprestimo.contrato,
         dataInicioContrato: dadosContratoEmprestimo.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoEmprestimo.competenciaFimDesconto,
         dataInclusao: dadosContratoEmprestimo.dataInclusao,
         situacao: dadosContratoEmprestimo.situacao,
@@ -447,7 +473,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: dadosContratoEmprestimo.valorEmprestado,
         valorParcela: dadosContratoEmprestimo.valorParcela,
         quantidadeParcelas: dadosContratoEmprestimo.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoEmprestimo.saldoQuitacao,
         taxa: value,
         tipoEmprestimo: {
@@ -470,7 +497,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: dadosContratoEmprestimo.contrato,
         dataInicioContrato: dadosContratoEmprestimo.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoEmprestimo.competenciaFimDesconto,
         dataInclusao: dadosContratoEmprestimo.dataInclusao,
         situacao: dadosContratoEmprestimo.situacao,
@@ -479,7 +507,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: dadosContratoEmprestimo.valorEmprestado,
         valorParcela: dadosContratoEmprestimo.valorParcela,
         quantidadeParcelas: dadosContratoEmprestimo.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoEmprestimo.saldoQuitacao,
         taxa: dadosContratoEmprestimo.saldoQuitacao,
         tipoEmprestimo: {
@@ -503,7 +532,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: dadosContratoEmprestimo.contrato,
         dataInicioContrato: dadosContratoEmprestimo.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoEmprestimo.competenciaFimDesconto,
         dataInclusao: dadosContratoEmprestimo.dataInclusao,
         situacao: dadosContratoEmprestimo.situacao,
@@ -512,7 +542,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: dadosContratoEmprestimo.valorEmprestado,
         valorParcela: dadosContratoEmprestimo.valorParcela,
         quantidadeParcelas: dadosContratoEmprestimo.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoEmprestimo.saldoQuitacao,
         taxa: dadosContratoEmprestimo.saldoQuitacao,
         tipoEmprestimo: {
@@ -536,7 +567,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: dadosContratoEmprestimo.contrato,
         dataInicioContrato: dadosContratoEmprestimo.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoEmprestimo.competenciaFimDesconto,
         dataInclusao: dadosContratoEmprestimo.dataInclusao,
         situacao: dadosContratoEmprestimo.situacao,
@@ -545,7 +577,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: dadosContratoEmprestimo.valorEmprestado,
         valorParcela: dadosContratoEmprestimo.valorParcela,
         quantidadeParcelas: dadosContratoEmprestimo.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoEmprestimo.saldoQuitacao,
         taxa: dadosContratoEmprestimo.saldoQuitacao,
         tipoEmprestimo: {
@@ -569,7 +602,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         id: dados.id,
         contrato: dadosContratoEmprestimo.contrato,
         dataInicioContrato: dadosContratoEmprestimo.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoEmprestimo.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoEmprestimo.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoEmprestimo.competenciaFimDesconto,
         dataInclusao: dadosContratoEmprestimo.dataInclusao,
         situacao: dadosContratoEmprestimo.situacao,
@@ -578,7 +612,8 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
         valorEmprestado: dadosContratoEmprestimo.valorEmprestado,
         valorParcela: dadosContratoEmprestimo.valorParcela,
         quantidadeParcelas: dadosContratoEmprestimo.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoEmprestimo.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoEmprestimo.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoEmprestimo.saldoQuitacao,
         taxa: dadosContratoEmprestimo.saldoQuitacao,
         tipoEmprestimo: {
@@ -602,46 +637,41 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
       <Grid item xs={3}>
         <TextField
           name="contrato"
-          // value={dados.contrato}
           onChange={handleInputContrato}
           fullWidth
           label="Contrato"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
-          name="dataInicioContrato"
-          // value={inputsValuesEmprestimo.dataInicioContrato}
-          fullWidth
+        <label htmlFor="">Data Inicio do Contrato</label>
+        <InputStyles
           onChange={handleInputDataInicioContrato}
-          label="Data Inicio do Contrato"
+          name="dataInicioContrato"
+          mask="date"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
-          name="competenciaInicioDesconto"
-          // // value={inputsValuesEmprestimo.competenciaInicioDesconto}
-          fullWidth
+        <label htmlFor="">Competencia Inicio Desconto</label>
+        <InputStyles
           onChange={handleInputCompetenciaInicioDesconto}
-          label="Competencia Inicio Desconto"
+          name="competenciaInicioDesconto"
+          mask="date"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
-          name="competenciaFimDesconto"
-          // // value={inputsValuesEmprestimo.competenciaFimDesconto}
-          fullWidth
+        <label htmlFor="">Competencia Fim Desconto</label>
+        <InputStyles
           onChange={handleInputCompetenciaFimDesconto}
-          label="competencia Fim Desconto"
+          name="competenciaFimDesconto"
+          mask="date"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
-          name="dataInclusao"
-          // // value={inputsValuesEmprestimo.dataInclusao}
-          fullWidth
+        <label htmlFor="">Data Inclusao</label>
+        <InputStyles
           onChange={handleInputDataInclusao}
-          label="Data Inclusao"
+          name="dataInclusao"
+          mask="date"
         />
       </Grid>
       <Grid item xs={3}>
@@ -655,7 +685,6 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
       <Grid item xs={3}>
         <TextField
           name="excluidoAps"
-          // // value={inputsValuesEmprestimo.excluidoAps}
           fullWidth
           onChange={handleInputExcluidoAps}
           label="Excluido Aps"
@@ -664,34 +693,33 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
       <Grid item xs={3}>
         <TextField
           name="excluidoBanco"
-          // // value={inputsValuesEmprestimo.excluidoBanco}
           fullWidth
           onChange={handleInputExcluidoBanco}
           label="Excluido Banco"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
-          name="valorEmprestado"
-          // // value={inputsValuesEmprestimo.valorEmprestado}
-          fullWidth
+        <label>Valor Emprestado</label>
+        <InputStyles
           onChange={handleInputValorEmprestado}
-          label="Valor Emprestado"
+          name="valorEmprestado"
+          mask="currency"
+          icone="money"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
-          name="valorParcela"
-          // // value={inputsValuesEmprestimo.valorParcela}
-          fullWidth
+        <label>Valor Parcela</label>
+        <InputStyles
           onChange={handleInputValorParcela}
-          label="Valor Parcela"
+          name="valorParcela"
+          mask="currency"
+          icone="money"
         />
       </Grid>
       <Grid item xs={3}>
         <TextField
           name="quantidadeParcelas"
-          // // value={inputsValuesEmprestimo.quantidadeParcelas}
+          type="number"
           fullWidth
           onChange={handleInputQuantidadeParcelas}
           label="Quantidade Parcelas"
@@ -699,29 +727,29 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
       </Grid>
       <Grid item xs={3}>
         <TextField
+          type="number"
           name="quantidadeParcelasEmAberto"
-          // // value={inputsValuesEmprestimo.quantidadeParcelasEmAberto}
           fullWidth
           onChange={handleInputQuantidadeParcelasEmAberto}
           label="Quantidade Parcelas Em Aberto"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
+        <label>Saldo Quitacao</label>
+        <InputStyles
           name="saldoQuitacao"
-          // // value={inputsValuesEmprestimo.saldoQuitacao}
-          fullWidth
+          mask="currency"
+          icone="money"
           onChange={handleInputSaldoQuitacao}
-          label="Saldo Quitacao"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
-          name="taxa"
-          // value={inputsValuesEmprestimo.taxa}
-          fullWidth
+        <label>Taxa</label>
+        <InputStyles
+          name="saldoQuitacao"
+          mask="currency"
+          icone="money"
           onChange={handleInputTaxa}
-          label="Taxa"
         />
       </Grid>
       <Grid item xs={12}>
@@ -730,7 +758,6 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
       <Grid item xs={6}>
         <TextField
           name="tipoEmprestimo.codigo"
-          // value={inputsValuesEmprestimo.taxa}
           fullWidth
           onChange={handleInputTipoEmprestimoCodigo}
           label="codigo"
@@ -739,7 +766,6 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
       <Grid item xs={6}>
         <TextField
           name="tipoEmprestimo.nome"
-          // value={inputsValuesEmprestimo.taxa}
           fullWidth
           onChange={handleInputTipoEmprestimoDescricao}
           label="nome"
@@ -751,7 +777,6 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
       <Grid item xs={6}>
         <TextField
           name="banco.codigo"
-          // value={inputsValuesEmprestimo.taxa}
           fullWidth
           onChange={handleInputBancoCodigo}
           label="codigo"
@@ -760,7 +785,6 @@ const FormEmprestimo = ({ dados }: FormEmprestimoProps) => {
       <Grid item xs={6}>
         <TextField
           name="banco.nome"
-          // value={inputsValuesEmprestimo.taxa}
           fullWidth
           onChange={handleInputBancoNome}
           label="nome"

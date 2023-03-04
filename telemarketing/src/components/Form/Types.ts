@@ -21,7 +21,6 @@ export type EmpréstimoConsignadoValues = {
   enderecoPessoal: EnderecoPessoalType;
   especie: EspecieType;
   margem: MargemType;
-  // contratosEmprestimo: ContratosEmprestimoType[];
 };
 
 export type EspecieType = {

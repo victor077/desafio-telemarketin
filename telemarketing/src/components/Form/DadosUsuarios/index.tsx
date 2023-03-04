@@ -14,21 +14,10 @@ import PensaoAlimenticia from "./PensaoAlimenticia";
 import BloqueioEmprestismo from "./BloqueioEmprestismo";
 import Genero from "./Genero";
 import InputMask from "react-input-mask";
+import InputStyles from "../../InputStyles";
 
 const DadosUsuarios = () => {
   const { getFieldProps } = useFormikContext<EmpréstimoConsignadoValues>();
-
-  function formatCurrency(value: any) {
-    value = value.replace(/\D/g, ""); // Remove tudo que não é dígito
-    value = value.replace(/^0+/, ""); // Remove zeros à esquerda
-    value = value.padStart(3, "0"); // Adiciona zeros à esquerda para completar milhares
-
-    const decimalPosition = value.length - 2;
-    const integerPart = value.slice(0, decimalPosition);
-    const decimalPart = value.slice(decimalPosition);
-
-    return `${integerPart},${decimalPart}`; // Retorna o valor formatado
-  }
 
   return (
     <>
@@ -46,15 +35,8 @@ const DadosUsuarios = () => {
         />
       </Grid>
       <Grid item xs={4}>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <label> Data Nascimento</label>
-          <input
-            style={{ padding: "8px 1px" }}
-            type="text"
-            pattern="\d{4}-\d{2}-\d{2}"
-            {...getFieldProps("dataNascimento")}
-          />
-        </div>
+        <label>Data Nascimento</label>
+        <InputStyles {...getFieldProps("dataNascimento")} mask="date" />
       </Grid>
       <Grid item xs={4}>
         <TextField
@@ -79,22 +61,15 @@ const DadosUsuarios = () => {
       </Grid>
 
       <Grid item xs={3}>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <label htmlFor="">Dib</label>
-          <input
-            style={{ padding: "8px 1px" }}
-            type="text"
-            pattern="\d{4}-\d{2}-\d{2}"
-            {...getFieldProps("dib")}
-          />
-        </div>
+        <label htmlFor="">Dib</label>
+        <InputStyles {...getFieldProps("dib")} mask="date" />
       </Grid>
       <Grid item xs={3}>
-        <TextField
-          {...getFieldProps(formatCurrency("valorBeneficio"))}
-          fullWidth
-          label="Valor Beneficio"
-          type="number"
+        <label>Valor Beneficio</label>
+        <InputStyles
+          {...getFieldProps("valorBeneficio")}
+          mask="currency"
+          icone="money"
         />
       </Grid>
       <Grid item xs={2}>

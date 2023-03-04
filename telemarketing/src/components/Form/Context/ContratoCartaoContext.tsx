@@ -41,7 +41,6 @@ const ContratoCartaoContextProvider = ({ children }: PropsWithChildren) => {
   };
 
   const inserirNovoObjeto = (event: MouseEventHandler<HTMLAnchorElement>) => {
-    // event.preventDefault()
     setContratoCartao((prevContratos) => [
       ...prevContratos,
       {

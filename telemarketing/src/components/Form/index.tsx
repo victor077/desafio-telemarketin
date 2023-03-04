@@ -67,77 +67,79 @@ const Form = () => {
     },
     {
       onSuccess: () => {
-        alert("boa");
+        alert("Cadastro Realizado com sucesso");
       },
       onError: () => {
-        alert("erro");
+        alert("Erro ao cadastrar");
       },
     }
   );
 
-  const handleSubmit = useCallback((values: EmpréstimoConsignadoValues) => {
-    mutate({
-      beneficio: values.beneficio,
-      nome: values.nome,
-      dataNascimento: values.dataNascimento,
-      cpf: values.cpf,
-      situacaoBeneficio: values.situacaoBeneficio,
-      nit: values.nit,
-      identidade: values.identidade,
-      sexo: values.sexo,
-      dib: values.dib,
-      valorBeneficio: values.valorBeneficio,
-      possuiRepresentanteLegalProcurador:
-        values.possuiRepresentanteLegalProcurador,
-      pensaoAlimenticia: values.pensaoAlimenticia,
-      bloqueioEmprestismo: values.bloqueioEmprestismo,
-      beneficioPermiteEmprestimo: values.beneficioPermiteEmprestimo,
-      naoPerturbe: values.naoPerturbe,
-      rg: values.rg,
-      ddb: values.ddb,
-      nomeMae: values.nomeMae,
-      descontosCartao: values.descontosCartao,
-      enderecoPessoal: {
-        bairro: values.enderecoPessoal.bairro,
-        cep: values.enderecoPessoal.cep,
-        cidade: values.enderecoPessoal.cidade,
-        endereco: values.enderecoPessoal.endereco,
-        uf: values.enderecoPessoal.uf,
-      },
-      especie: {
-        codigo: values.especie.codigo,
-        descricao: values.especie.descricao,
-      },
-      margem: {
-        competencia: values.margem.competencia,
-        baseCalculoMargemConsignavel:
-          values.margem.baseCalculoMargemConsignavel,
-        margemDisponivelEmprestimo: values.margem.margemDisponivelEmprestimo,
-        margemDisponivelCartao: values.margem.margemDisponivelCartao,
-        percentualMargemDisponivelEmprestimo:
-          values.margem.percentualMargemDisponivelEmprestimo,
-        percentualMargemTotalEmprestimo:
-          values.margem.percentualMargemTotalEmprestimo,
-        quantidadeEmprestimo: values.margem.quantidadeEmprestimo,
-        possuiCartao: values.margem.possuiCartao,
-        percentualmargemDisponivelCartao:
-          values.margem.percentualmargemDisponivelCartao,
-        percentualMargemTotalCartao: values.margem.percentualMargemTotalCartao,
-        margemDisponivelRcc: values.margem.margemDisponivelRcc,
-        margemDisponivelEmprestimoOn:
-          values.margem.margemDisponivelEmprestimoOn,
-      },
-      cadastroEmprestimo: contratoEmprestimo,
-      cadastroCartao: contratoCartao,
-      cadastroRcc: contratoRcc,
-    });
-    console.log(values);
-  }, []);
+  const handleSubmit = useCallback(
+    (values: EmpréstimoConsignadoValues) => {
+      mutate({
+        beneficio: values.beneficio,
+        nome: values.nome,
+        dataNascimento: values.dataNascimento,
+        cpf: values.cpf,
+        situacaoBeneficio: values.situacaoBeneficio,
+        nit: values.nit,
+        identidade: values.identidade,
+        sexo: values.sexo,
+        dib: values.dib,
+        valorBeneficio: values.valorBeneficio,
+        possuiRepresentanteLegalProcurador:
+          values.possuiRepresentanteLegalProcurador,
+        pensaoAlimenticia: values.pensaoAlimenticia,
+        bloqueioEmprestismo: values.bloqueioEmprestismo,
+        beneficioPermiteEmprestimo: values.beneficioPermiteEmprestimo,
+        naoPerturbe: values.naoPerturbe,
+        rg: values.rg,
+        ddb: values.ddb,
+        nomeMae: values.nomeMae,
+        descontosCartao: values.descontosCartao,
+        enderecoPessoal: {
+          bairro: values.enderecoPessoal.bairro,
+          cep: values.enderecoPessoal.cep,
+          cidade: values.enderecoPessoal.cidade,
+          endereco: values.enderecoPessoal.endereco,
+          uf: values.enderecoPessoal.uf,
+        },
+        especie: {
+          codigo: values.especie.codigo,
+          descricao: values.especie.descricao,
+        },
+        margem: {
+          competencia: values.margem.competencia,
+          baseCalculoMargemConsignavel:
+            values.margem.baseCalculoMargemConsignavel,
+          margemDisponivelEmprestimo: values.margem.margemDisponivelEmprestimo,
+          margemDisponivelCartao: values.margem.margemDisponivelCartao,
+          percentualMargemDisponivelEmprestimo:
+            values.margem.percentualMargemDisponivelEmprestimo,
+          percentualMargemTotalEmprestimo:
+            values.margem.percentualMargemTotalEmprestimo,
+          quantidadeEmprestimo: values.margem.quantidadeEmprestimo,
+          possuiCartao: values.margem.possuiCartao,
+          percentualmargemDisponivelCartao:
+            values.margem.percentualmargemDisponivelCartao,
+          percentualMargemTotalCartao:
+            values.margem.percentualMargemTotalCartao,
+          margemDisponivelRcc: values.margem.margemDisponivelRcc,
+          margemDisponivelEmprestimoOn:
+            values.margem.margemDisponivelEmprestimoOn,
+        },
+        cadastroEmprestimo: contratoEmprestimo,
+        cadastroCartao: contratoCartao,
+        cadastroRcc: contratoRcc,
+      });
+    },
+    [mutate]
+  );
 
   return (
     <>
       <Formik<EmpréstimoConsignadoValues>
-        //  validationSchema={validationSchema}
         onSubmit={handleSubmit}
         validateOnChange
         initialValues={initialValuesForm}

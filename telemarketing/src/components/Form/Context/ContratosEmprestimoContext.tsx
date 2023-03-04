@@ -41,7 +41,6 @@ const ContratoEmprestimoContextProvider = ({ children }: PropsWithChildren) => {
   };
 
   const inserirNovoObjeto = (event: MouseEventHandler<HTMLAnchorElement>) => {
-    // event.preventDefault()
     setContratoEmprestimo((prevContratos) => [
       ...prevContratos,
       {

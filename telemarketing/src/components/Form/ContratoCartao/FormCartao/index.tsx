@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useContratoCartao } from "../../Context/ContratoCartaoContext";
 import { ContratosType, dadosContratoCartao } from "../../Context/Types";
+import InputStyles from "../../../InputStyles";
 
 type FormCartaoProps = {
   dados: ContratosType;
@@ -22,7 +23,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: value,
         dataInicioContrato: dadosContratoCartao.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoCartao.competenciaFimDesconto,
         dataInclusao: dadosContratoCartao.dataInclusao,
         situacao: dadosContratoCartao.situacao,
@@ -31,7 +33,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: dadosContratoCartao.valorEmprestado,
         valorParcela: dadosContratoCartao.valorParcela,
         quantidadeParcelas: dadosContratoCartao.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoCartao.saldoQuitacao,
         taxa: dadosContratoCartao.taxa,
         tipoEmprestimo: {
@@ -55,7 +58,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: dadosContratoCartao.contrato,
         dataInicioContrato: value,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoCartao.competenciaFimDesconto,
         dataInclusao: dadosContratoCartao.dataInclusao,
         situacao: dadosContratoCartao.situacao,
@@ -64,7 +68,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: dadosContratoCartao.valorEmprestado,
         valorParcela: dadosContratoCartao.valorParcela,
         quantidadeParcelas: dadosContratoCartao.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoCartao.saldoQuitacao,
         taxa: dadosContratoCartao.taxa,
         tipoEmprestimo: {
@@ -97,7 +102,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: dadosContratoCartao.valorEmprestado,
         valorParcela: dadosContratoCartao.valorParcela,
         quantidadeParcelas: dadosContratoCartao.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoCartao.saldoQuitacao,
         taxa: dadosContratoCartao.taxa,
         tipoEmprestimo: {
@@ -120,7 +126,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: dadosContratoCartao.contrato,
         dataInicioContrato: dadosContratoCartao.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: value,
         dataInclusao: dadosContratoCartao.dataInclusao,
         situacao: dadosContratoCartao.situacao,
@@ -129,7 +136,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: dadosContratoCartao.valorEmprestado,
         valorParcela: dadosContratoCartao.valorParcela,
         quantidadeParcelas: dadosContratoCartao.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoCartao.saldoQuitacao,
         taxa: dadosContratoCartao.taxa,
         tipoEmprestimo: {
@@ -152,7 +160,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: dadosContratoCartao.contrato,
         dataInicioContrato: dadosContratoCartao.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoCartao.competenciaFimDesconto,
         dataInclusao: value,
         situacao: dadosContratoCartao.situacao,
@@ -161,7 +170,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: dadosContratoCartao.valorEmprestado,
         valorParcela: dadosContratoCartao.valorParcela,
         quantidadeParcelas: dadosContratoCartao.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoCartao.saldoQuitacao,
         taxa: dadosContratoCartao.taxa,
         tipoEmprestimo: {
@@ -184,7 +194,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: dadosContratoCartao.contrato,
         dataInicioContrato: dadosContratoCartao.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoCartao.competenciaFimDesconto,
         dataInclusao: dadosContratoCartao.dataInclusao,
         situacao: value,
@@ -193,7 +204,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: dadosContratoCartao.valorEmprestado,
         valorParcela: dadosContratoCartao.valorParcela,
         quantidadeParcelas: dadosContratoCartao.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoCartao.saldoQuitacao,
         taxa: dadosContratoCartao.taxa,
         tipoEmprestimo: {
@@ -216,7 +228,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: dadosContratoCartao.contrato,
         dataInicioContrato: dadosContratoCartao.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoCartao.competenciaFimDesconto,
         dataInclusao: dadosContratoCartao.dataInclusao,
         situacao: dadosContratoCartao.situacao,
@@ -225,7 +238,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: dadosContratoCartao.valorEmprestado,
         valorParcela: dadosContratoCartao.valorParcela,
         quantidadeParcelas: dadosContratoCartao.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoCartao.saldoQuitacao,
         taxa: dadosContratoCartao.taxa,
         tipoEmprestimo: {
@@ -248,7 +262,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: dadosContratoCartao.contrato,
         dataInicioContrato: dadosContratoCartao.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoCartao.competenciaFimDesconto,
         dataInclusao: dadosContratoCartao.dataInclusao,
         situacao: dadosContratoCartao.situacao,
@@ -257,7 +272,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: dadosContratoCartao.valorEmprestado,
         valorParcela: dadosContratoCartao.valorParcela,
         quantidadeParcelas: dadosContratoCartao.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoCartao.saldoQuitacao,
         taxa: dadosContratoCartao.taxa,
         tipoEmprestimo: {
@@ -280,7 +296,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: dadosContratoCartao.contrato,
         dataInicioContrato: dadosContratoCartao.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoCartao.competenciaFimDesconto,
         dataInclusao: dadosContratoCartao.dataInclusao,
         situacao: dadosContratoCartao.situacao,
@@ -289,7 +306,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: value,
         valorParcela: dadosContratoCartao.valorParcela,
         quantidadeParcelas: dadosContratoCartao.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoCartao.saldoQuitacao,
         taxa: dadosContratoCartao.taxa,
         tipoEmprestimo: {
@@ -312,7 +330,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: dadosContratoCartao.contrato,
         dataInicioContrato: dadosContratoCartao.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoCartao.competenciaFimDesconto,
         dataInclusao: dadosContratoCartao.dataInclusao,
         situacao: dadosContratoCartao.situacao,
@@ -321,7 +340,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: dadosContratoCartao.valorEmprestado,
         valorParcela: value,
         quantidadeParcelas: dadosContratoCartao.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoCartao.saldoQuitacao,
         taxa: dadosContratoCartao.taxa,
         tipoEmprestimo: {
@@ -344,7 +364,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: dadosContratoCartao.contrato,
         dataInicioContrato: dadosContratoCartao.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoCartao.competenciaFimDesconto,
         dataInclusao: dadosContratoCartao.dataInclusao,
         situacao: dadosContratoCartao.situacao,
@@ -353,7 +374,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: dadosContratoCartao.valorEmprestado,
         valorParcela: dadosContratoCartao.valorParcela,
         quantidadeParcelas: value,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoCartao.saldoQuitacao,
         taxa: dadosContratoCartao.taxa,
         tipoEmprestimo: {
@@ -376,7 +398,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: dadosContratoCartao.contrato,
         dataInicioContrato: dadosContratoCartao.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoCartao.competenciaFimDesconto,
         dataInclusao: dadosContratoCartao.dataInclusao,
         situacao: dadosContratoCartao.situacao,
@@ -408,7 +431,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: dadosContratoCartao.contrato,
         dataInicioContrato: dadosContratoCartao.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoCartao.competenciaFimDesconto,
         dataInclusao: dadosContratoCartao.dataInclusao,
         situacao: dadosContratoCartao.situacao,
@@ -417,7 +441,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: dadosContratoCartao.valorEmprestado,
         valorParcela: dadosContratoCartao.valorParcela,
         quantidadeParcelas: dadosContratoCartao.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: value,
         taxa: dadosContratoCartao.taxa,
         tipoEmprestimo: {
@@ -440,7 +465,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: dadosContratoCartao.contrato,
         dataInicioContrato: dadosContratoCartao.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoCartao.competenciaFimDesconto,
         dataInclusao: dadosContratoCartao.dataInclusao,
         situacao: dadosContratoCartao.situacao,
@@ -449,7 +475,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: dadosContratoCartao.valorEmprestado,
         valorParcela: dadosContratoCartao.valorParcela,
         quantidadeParcelas: dadosContratoCartao.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoCartao.saldoQuitacao,
         taxa: value,
         tipoEmprestimo: {
@@ -472,7 +499,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: dadosContratoCartao.contrato,
         dataInicioContrato: dadosContratoCartao.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoCartao.competenciaFimDesconto,
         dataInclusao: dadosContratoCartao.dataInclusao,
         situacao: dadosContratoCartao.situacao,
@@ -481,7 +509,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: dadosContratoCartao.valorEmprestado,
         valorParcela: dadosContratoCartao.valorParcela,
         quantidadeParcelas: dadosContratoCartao.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoCartao.saldoQuitacao,
         taxa: dadosContratoCartao.saldoQuitacao,
         tipoEmprestimo: {
@@ -505,7 +534,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: dadosContratoCartao.contrato,
         dataInicioContrato: dadosContratoCartao.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoCartao.competenciaFimDesconto,
         dataInclusao: dadosContratoCartao.dataInclusao,
         situacao: dadosContratoCartao.situacao,
@@ -514,7 +544,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: dadosContratoCartao.valorEmprestado,
         valorParcela: dadosContratoCartao.valorParcela,
         quantidadeParcelas: dadosContratoCartao.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoCartao.saldoQuitacao,
         taxa: dadosContratoCartao.saldoQuitacao,
         tipoEmprestimo: {
@@ -538,7 +569,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: dadosContratoCartao.contrato,
         dataInicioContrato: dadosContratoCartao.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoCartao.competenciaFimDesconto,
         dataInclusao: dadosContratoCartao.dataInclusao,
         situacao: dadosContratoCartao.situacao,
@@ -547,7 +579,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: dadosContratoCartao.valorEmprestado,
         valorParcela: dadosContratoCartao.valorParcela,
         quantidadeParcelas: dadosContratoCartao.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoCartao.saldoQuitacao,
         taxa: dadosContratoCartao.saldoQuitacao,
         tipoEmprestimo: {
@@ -571,7 +604,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         id: dados.id,
         contrato: dadosContratoCartao.contrato,
         dataInicioContrato: dadosContratoCartao.dataInicioContrato,
-        competenciaInicioDesconto: dadosContratoCartao.competenciaInicioDesconto,
+        competenciaInicioDesconto:
+          dadosContratoCartao.competenciaInicioDesconto,
         competenciaFimDesconto: dadosContratoCartao.competenciaFimDesconto,
         dataInclusao: dadosContratoCartao.dataInclusao,
         situacao: dadosContratoCartao.situacao,
@@ -580,7 +614,8 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
         valorEmprestado: dadosContratoCartao.valorEmprestado,
         valorParcela: dadosContratoCartao.valorParcela,
         quantidadeParcelas: dadosContratoCartao.quantidadeParcelas,
-        quantidadeParcelasEmAberto: dadosContratoCartao.quantidadeParcelasEmAberto,
+        quantidadeParcelasEmAberto:
+          dadosContratoCartao.quantidadeParcelasEmAberto,
         saldoQuitacao: dadosContratoCartao.saldoQuitacao,
         taxa: dadosContratoCartao.saldoQuitacao,
         tipoEmprestimo: {
@@ -604,46 +639,41 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
       <Grid item xs={3}>
         <TextField
           name="contrato"
-          // value={dados.contrato}
           onChange={handleInputContrato}
           fullWidth
           label="Contrato"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
-          name="dataInicioContrato"
-          // value={inputsValuesEmprestimo.dataInicioContrato}
-          fullWidth
+        <label htmlFor="">Data Inicio do Contrato</label>
+        <InputStyles
           onChange={handleInputDataInicioContrato}
-          label="Data Inicio do Contrato"
+          name="dataInicioContrato"
+          mask="date"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
-          name="competenciaInicioDesconto"
-          // // value={inputsValuesEmprestimo.competenciaInicioDesconto}
-          fullWidth
+        <label htmlFor="">Competencia Inicio Desconto</label>
+        <InputStyles
           onChange={handleInputCompetenciaInicioDesconto}
-          label="Competencia Inicio Desconto"
+          name="competenciaInicioDesconto"
+          mask="date"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
-          name="competenciaFimDesconto"
-          // // value={inputsValuesEmprestimo.competenciaFimDesconto}
-          fullWidth
+        <label htmlFor="">Competencia Fim Desconto</label>
+        <InputStyles
           onChange={handleInputCompetenciaFimDesconto}
-          label="competencia Fim Desconto"
+          name="competenciaFimDesconto"
+          mask="date"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
-          name="dataInclusao"
-          // // value={inputsValuesEmprestimo.dataInclusao}
-          fullWidth
+        <label htmlFor="">Data Inclusao</label>
+        <InputStyles
           onChange={handleInputDataInclusao}
-          label="Data Inclusao"
+          name="dataInclusao"
+          mask="date"
         />
       </Grid>
       <Grid item xs={3}>
@@ -657,7 +687,6 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
       <Grid item xs={3}>
         <TextField
           name="excluidoAps"
-          // // value={inputsValuesEmprestimo.excluidoAps}
           fullWidth
           onChange={handleInputExcluidoAps}
           label="Excluido Aps"
@@ -666,34 +695,33 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
       <Grid item xs={3}>
         <TextField
           name="excluidoBanco"
-          // // value={inputsValuesEmprestimo.excluidoBanco}
           fullWidth
           onChange={handleInputExcluidoBanco}
           label="Excluido Banco"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
-          name="valorEmprestado"
-          // // value={inputsValuesEmprestimo.valorEmprestado}
-          fullWidth
+        <label>Valor Emprestado</label>
+        <InputStyles
           onChange={handleInputValorEmprestado}
-          label="Valor Emprestado"
+          name="valorEmprestado"
+          mask="currency"
+          icone="money"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
-          name="valorParcela"
-          // // value={inputsValuesEmprestimo.valorParcela}
-          fullWidth
+        <label>Valor Parcela</label>
+        <InputStyles
           onChange={handleInputValorParcela}
-          label="Valor Parcela"
+          name="valorParcela"
+          mask="currency"
+          icone="money"
         />
       </Grid>
       <Grid item xs={3}>
         <TextField
           name="quantidadeParcelas"
-          // // value={inputsValuesEmprestimo.quantidadeParcelas}
+          type="number"
           fullWidth
           onChange={handleInputQuantidadeParcelas}
           label="Quantidade Parcelas"
@@ -701,29 +729,29 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
       </Grid>
       <Grid item xs={3}>
         <TextField
+          type="number"
           name="quantidadeParcelasEmAberto"
-          // // value={inputsValuesEmprestimo.quantidadeParcelasEmAberto}
           fullWidth
           onChange={handleInputQuantidadeParcelasEmAberto}
           label="Quantidade Parcelas Em Aberto"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
+        <label>Saldo Quitacao</label>
+        <InputStyles
           name="saldoQuitacao"
-          // // value={inputsValuesEmprestimo.saldoQuitacao}
-          fullWidth
+          mask="currency"
+          icone="money"
           onChange={handleInputSaldoQuitacao}
-          label="Saldo Quitacao"
         />
       </Grid>
       <Grid item xs={3}>
-        <TextField
-          name="taxa"
-          // value={inputsValuesEmprestimo.taxa}
-          fullWidth
+        <label>Taxa</label>
+        <InputStyles
+          name="saldoQuitacao"
+          mask="currency"
+          icone="money"
           onChange={handleInputTaxa}
-          label="Taxa"
         />
       </Grid>
       <Grid item xs={12}>
@@ -732,7 +760,6 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
       <Grid item xs={6}>
         <TextField
           name="tipoEmprestimo.codigo"
-          // value={inputsValuesEmprestimo.taxa}
           fullWidth
           onChange={handleInputTipoEmprestimoCodigo}
           label="codigo"
@@ -741,7 +768,6 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
       <Grid item xs={6}>
         <TextField
           name="tipoEmprestimo.nome"
-          // value={inputsValuesEmprestimo.taxa}
           fullWidth
           onChange={handleInputTipoEmprestimoDescricao}
           label="nome"
@@ -753,7 +779,6 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
       <Grid item xs={6}>
         <TextField
           name="banco.codigo"
-          // value={inputsValuesEmprestimo.taxa}
           fullWidth
           onChange={handleInputBancoCodigo}
           label="codigo"
@@ -762,7 +787,6 @@ const FormCartao = ({ dados }: FormCartaoProps) => {
       <Grid item xs={6}>
         <TextField
           name="banco.nome"
-          // value={inputsValuesEmprestimo.taxa}
           fullWidth
           onChange={handleInputBancoNome}
           label="nome"

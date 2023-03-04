@@ -41,7 +41,6 @@ import React, {
     };
   
     const inserirNovoObjeto = (event: MouseEventHandler<HTMLAnchorElement>) => {
-      // event.preventDefault()
       setContratoRcc((prevContratos) => [
         ...prevContratos,
         {
