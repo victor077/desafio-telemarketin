@@ -3,7 +3,10 @@ import * as yup from "yup";
 const validationSchema = yup.object().shape({
   beneficio: yup.string().notRequired(),
   nome: yup.string().notRequired(),
-  dataNascimento: yup.string().notRequired(),
+  dataNascimento: yup
+    .string()
+    .notRequired()
+    .matches(/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/),
   cpf: yup
     .string()
     .notRequired()
@@ -20,7 +23,10 @@ const validationSchema = yup.object().shape({
   bloqueioEmprestismo: yup.string().notRequired(),
   beneficioPermiteEmprestimo: yup.string().notRequired(),
   naoPerturbe: yup.string().notRequired(),
-  rg: yup.string().notRequired().matches(/^\d{1,2}\.\d{3}\.\d{3}(-\d{1}|)$/, "RG inválido"),
+  rg: yup
+    .string()
+    .notRequired()
+    .matches(/^\d{1,2}\.\d{3}\.\d{3}(-\d{1}|)$/, "RG inválido"),
   ddb: yup.string().notRequired(),
   nomeMae: yup.string().notRequired(),
   codigo: yup.string().notRequired(),

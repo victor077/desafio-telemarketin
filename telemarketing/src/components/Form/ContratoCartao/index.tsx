@@ -2,22 +2,22 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
-import { useContratos } from "../Context/ContratosContext";
 import { Button } from "@mui/material";
 import FormCartao from "./FormCartao";
+import { useContratoCartao } from "../Context/ContratoCartaoContext";
 
 const ContratoCartao = () => {
-  const { contratosCartao, handleInserirContratoCartao } = useContratos();
+  const { inserirNovoObjeto, contratoCartao } = useContratoCartao();
 
   return (
     <>
-      {contratosCartao.map(() => (
-        <FormCartao />
+      {contratoCartao.map((item) => (
+        <FormCartao dados={item}  />
       ))}
-      <Grid item xs={6}>
+      <Grid item xs={12}>
         <Button
           fullWidth
-          onClick={(event) => handleInserirContratoCartao(event.preventDefault)}
+          onClick={(event) => inserirNovoObjeto(event.preventDefault)}
           variant="contained"
         >
           Adicionar Contrato Cartao
@@ -26,5 +26,6 @@ const ContratoCartao = () => {
     </>
   );
 };
+
 
 export default ContratoCartao;

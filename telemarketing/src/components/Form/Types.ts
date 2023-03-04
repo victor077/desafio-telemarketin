@@ -24,12 +24,12 @@ export type EmpréstimoConsignadoValues = {
   // contratosEmprestimo: ContratosEmprestimoType[];
 };
 
-type EspecieType = {
+export type EspecieType = {
   codigo: string;
   descricao: string;
 };
 
-type MargemType = {
+export type MargemType = {
   competencia: string;
   baseCalculoMargemConsignavel: number;
   margemDisponivelEmprestimo: number;
@@ -74,7 +74,7 @@ type BancoType = {
   nome: string;
 };
 
-type DescontosCartaoType = {};
+export type DescontosCartaoType = {};
 
 export type EnderecoPessoalType = {
   endereco: string;

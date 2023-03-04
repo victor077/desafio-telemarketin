@@ -1,37 +1,143 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 
 import { Box, Button } from "@mui/material";
 import useStyles from "./styled";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import TextField from "@mui/material/TextField";
 import DadosUsuarios from "./DadosUsuarios";
 import { Formik } from "formik";
-import { ContratosEmprestimoType, EmpréstimoConsignadoValues } from "./Types";
+import {
+  DescontosCartaoType,
+  EmpréstimoConsignadoValues,
+  EnderecoPessoalType,
+  EspecieType,
+  MargemType,
+} from "./Types";
 import { initialValuesForm } from "./Utils/InitialValuesForm";
 import Margem from "./Margem";
 import ContratoEmprestimo from "./ContratoEmprestimo";
-import { useContratos } from "./Context/ContratosContext";
 import ContratoCartao from "./ContratoCartao";
 import ContratoRcc from "./ContratoRcc";
+import { useContratoCartao } from "./Context/ContratoCartaoContext";
+import { useContratoEmprestimo } from "./Context/ContratosEmprestimoContext";
+import { useContratoRcc } from "./Context/ContratoRccContext";
+import { useMutation } from "react-query";
+import api from "../../Api/api";
+import { ContratosType } from "./Context/Types";
+import validationSchema from "./validate";
+
+type inInCluirCadastro = {
+  beneficio: string;
+  nome: string;
+  dataNascimento: string;
+  cpf: string;
+  situacaoBeneficio: string;
+  nit: string;
+  identidade: number;
+  sexo: string;
+  dib: string;
+  valorBeneficio: number;
+  possuiRepresentanteLegalProcurador: string;
+  pensaoAlimenticia: string;
+  bloqueioEmprestismo: string;
+  beneficioPermiteEmprestimo: string;
+  naoPerturbe: string;
+  rg: string;
+  ddb: string;
+  nomeMae: string;
+  descontosCartao: DescontosCartaoType;
+  enderecoPessoal: EnderecoPessoalType;
+  especie: EspecieType;
+  margem: MargemType;
+  cadastroEmprestimo: ContratosType[];
+  cadastroCartao: ContratosType[];
+  cadastroRcc: ContratosType[];
+};
 
 const Form = () => {
   const styles = useStyles();
-  const { inputsValuesCartao, inputsValuesEmprestimo, inputsValuesRcc } =
-    useContratos();
-  // console.log("inputsCartao", inputsValuesCartao);
-  // console.log("inputsValuesEmprestimo", inputsValuesEmprestimo);
-  // console.log("inputsValuesRcc", inputsValuesRcc);
+  const { contratoEmprestimo } = useContratoEmprestimo();
+  const { contratoCartao } = useContratoCartao();
+  const { contratoRcc } = useContratoRcc();
 
+  const { mutate } = useMutation(
+    (novoCadastro: inInCluirCadastro) => {
+      const response = api.post("teste", novoCadastro);
+      return response;
+    },
+    {
+      onSuccess: () => {
+        alert("boa");
+      },
+      onError: () => {
+        alert("erro");
+      },
+    }
+  );
 
   const handleSubmit = useCallback((values: EmpréstimoConsignadoValues) => {
-    console.log("submmit", values, "state", inputsValuesCartao);
+    mutate({
+      beneficio: values.beneficio,
+      nome: values.nome,
+      dataNascimento: values.dataNascimento,
+      cpf: values.cpf,
+      situacaoBeneficio: values.situacaoBeneficio,
+      nit: values.nit,
+      identidade: values.identidade,
+      sexo: values.sexo,
+      dib: values.dib,
+      valorBeneficio: values.valorBeneficio,
+      possuiRepresentanteLegalProcurador:
+        values.possuiRepresentanteLegalProcurador,
+      pensaoAlimenticia: values.pensaoAlimenticia,
+      bloqueioEmprestismo: values.bloqueioEmprestismo,
+      beneficioPermiteEmprestimo: values.beneficioPermiteEmprestimo,
+      naoPerturbe: values.naoPerturbe,
+      rg: values.rg,
+      ddb: values.ddb,
+      nomeMae: values.nomeMae,
+      descontosCartao: values.descontosCartao,
+      enderecoPessoal: {
+        bairro: values.enderecoPessoal.bairro,
+        cep: values.enderecoPessoal.cep,
+        cidade: values.enderecoPessoal.cidade,
+        endereco: values.enderecoPessoal.endereco,
+        uf: values.enderecoPessoal.uf,
+      },
+      especie: {
+        codigo: values.especie.codigo,
+        descricao: values.especie.descricao,
+      },
+      margem: {
+        competencia: values.margem.competencia,
+        baseCalculoMargemConsignavel:
+          values.margem.baseCalculoMargemConsignavel,
+        margemDisponivelEmprestimo: values.margem.margemDisponivelEmprestimo,
+        margemDisponivelCartao: values.margem.margemDisponivelCartao,
+        percentualMargemDisponivelEmprestimo:
+          values.margem.percentualMargemDisponivelEmprestimo,
+        percentualMargemTotalEmprestimo:
+          values.margem.percentualMargemTotalEmprestimo,
+        quantidadeEmprestimo: values.margem.quantidadeEmprestimo,
+        possuiCartao: values.margem.possuiCartao,
+        percentualmargemDisponivelCartao:
+          values.margem.percentualmargemDisponivelCartao,
+        percentualMargemTotalCartao: values.margem.percentualMargemTotalCartao,
+        margemDisponivelRcc: values.margem.margemDisponivelRcc,
+        margemDisponivelEmprestimoOn:
+          values.margem.margemDisponivelEmprestimoOn,
+      },
+      cadastroEmprestimo: contratoEmprestimo,
+      cadastroCartao: contratoCartao,
+      cadastroRcc: contratoRcc,
+    });
+    console.log(values);
   }, []);
 
   return (
     <>
       <Formik<EmpréstimoConsignadoValues>
-        // validationSchema={}
+        //  validationSchema={validationSchema}
         onSubmit={handleSubmit}
         validateOnChange
         initialValues={initialValuesForm}
@@ -54,116 +160,6 @@ const Form = () => {
                 <ContratoEmprestimo />
                 <ContratoCartao />
                 <ContratoRcc />
-                {/* <Grid item xs={12}>
-            <Typography variant="h6">Dados Bancarios</Typography>
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="Nome" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="Codigo" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="Tipo" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="Número" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="Codigo" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="Nome" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="Cep" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="Endereco" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="Bairro" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="Uf" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="Orgao Pagador" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="Tipo da Conta" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="Número" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="Orgao Pagador" />
-          </Grid>
-         
-          <Grid item xs={12}>
-            <Typography variant="h6">Contratos Cartao</Typography>
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="contrato" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="dataInicioContrato" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="dataInclusao" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="competenciaInicioDesconto" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="competenciaFimDesconto" />
-          </Grid>
-        
-          <Grid item xs={3}>
-            <TextField fullWidth label="situacao" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="excluidoAps" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="excluidoBanco" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="valorEmprestado" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="valorParcela" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="quantidadeParcelas" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="quantidadeParcelasEmAberto" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="saldoQuitacao" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="taxa" />
-          </Grid>
-          <Grid item xs={12}>
-            <Typography variant="h6">Tipo Emprestimo</Typography>
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="codigo" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="descricao" />
-          </Grid>
-          <Grid item xs={12}>
-            <Typography variant="h6">Banco</Typography>
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="nome" />
-          </Grid>
-          <Grid item xs={3}>
-            <TextField fullWidth label="codigo" />
-          </Grid> */}
               </Grid>
             </Box>
             <Box style={{ paddingLeft: "4rem" }}>

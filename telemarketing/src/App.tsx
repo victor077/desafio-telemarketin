@@ -1,11 +1,17 @@
 import Form from "./components/Form";
-import ContratosContextProvider from "./components/Form/Context/ContratosContext";
+import ContratoCartaoContextProvider from "./components/Form/Context/ContratoCartaoContext";
+import ContratoRccContextProvider from "./components/Form/Context/ContratoRccContext";
+import ContratoEmprestimoContextProvider from "./components/Form/Context/ContratosEmprestimoContext";
 
 function App() {
   return (
-    <ContratosContextProvider>
-      <Form />
-    </ContratosContextProvider>
+    <ContratoRccContextProvider>
+      <ContratoCartaoContextProvider>
+        <ContratoEmprestimoContextProvider>
+          <Form />
+        </ContratoEmprestimoContextProvider>
+      </ContratoCartaoContextProvider>
+    </ContratoRccContextProvider>
   );
 }
 

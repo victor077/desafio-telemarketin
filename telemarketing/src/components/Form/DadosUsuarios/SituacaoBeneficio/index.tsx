@@ -24,8 +24,8 @@ const SituacaoBeneficio = () => {
         label="Situacao Beneficio"
         onChange={handleChangeSituacao}
       >
-        <MenuItem value={"ativo"}>Ativo</MenuItem>
-        <MenuItem value={"desativo"}>Desativo</MenuItem>
+        <MenuItem value={"ATIVO"}>Ativo</MenuItem>
+        <MenuItem value={"DESATIVO"}>Desativo</MenuItem>
       </Select>
     </FormControl >
   );

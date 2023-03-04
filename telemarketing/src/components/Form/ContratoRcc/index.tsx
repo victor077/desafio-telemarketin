@@ -1,23 +1,23 @@
 import React from "react";
-
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
+import { Button } from "@mui/material";
+import { useContratoRcc } from "../Context/ContratoRccContext";
 import FormRcc from "./FormRcc";
-import { useContratos } from "../Context/ContratosContext";
-import Button from "@mui/material/Button";
 
 const ContratoRcc = () => {
-  const { contratosRcc, handleInserirContratoRcc } = useContratos();
+  const { inserirNovoObjeto, contratoRcc } = useContratoRcc();
+
   return (
     <>
-      {contratosRcc.map(() => (
-        <FormRcc />
+      {contratoRcc.map((item) => (
+        <FormRcc dados={item}  />
       ))}
-      <Grid item xs={6}>
+      <Grid item xs={12}>
         <Button
           fullWidth
-          onClick={(event) => handleInserirContratoRcc(event.preventDefault)}
+          onClick={(event) => inserirNovoObjeto(event.preventDefault)}
           variant="contained"
         >
           Adicionar Contrato Rcc
@@ -26,5 +26,6 @@ const ContratoRcc = () => {
     </>
   );
 };
+
 
 export default ContratoRcc;

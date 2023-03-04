@@ -5,7 +5,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { useFormikContext } from "formik";
 import { EmpréstimoConsignadoValues } from "../../Types";
 
-const Sexo = () => {
+const Genero = () => {
   const { setFieldValue, getFieldProps } =
     useFormikContext<EmpréstimoConsignadoValues>();
 
@@ -22,11 +22,11 @@ const Sexo = () => {
         label="Sexo"
         onChange={handleChangeSexo}
       >
-        <MenuItem value={"feminino"}>Feminino</MenuItem>
-        <MenuItem value={"masculino"}>Masculino</MenuItem>
+        <MenuItem value={"FEMININO"}>Feminino</MenuItem>
+        <MenuItem value={"MASCULINO"}>Masculino</MenuItem>
       </Select>
     </FormControl>
   );
 };
 
-export default Sexo;
+export default Genero;
